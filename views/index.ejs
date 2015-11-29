@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Excel to CSV</title>
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <script type="text/javascript" src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <script type="text/javascript" src="/javascripts/FileSaver.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container">
+        <h1>Excel to CSV converter</h1>
+        <div class="main">
+            <p>Select your excel file and click convert.</p>
+            <form class="form" action="/convert" method="post" enctype="multipart/form-data">
+                <input type="file" name="xls" id="file">
+                <div class="fileSelect">Choose file</div>
+                <div class="filename">No file chosen...</div><br>
+                <button type="submit" name="button">Convert</button>
+            </form>
+            <div id="status"></div>
+            <div class="data">
+                <h3>Converted data:</h3>
+                <div class="types">
+                    <div class='csv active'>CSV</div>
+                    <div class='table'>TABLE</div>
+                </div>
+                <div class='csv active'><div class="content"></div></div>
+                <div class='table'><div class="content"></div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+body {
+    padding: 0px;
+    margin: 0;
+    font: 18px Lato, Helvetica, Arial, sans-serif;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a{
+    color: #85BAE5;
+}
+
+h1, h2, h3{
+    font-weight: 300;
+}
+
+h1{
+    font-size: 64px;
+}
+p{
+    line-height: 26px;
+}
+
+.container{
+    padding-left: 50px;
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.main{
+    margin-left: 40px;
+}
+
+form{
+    clear:both;
+    display: inline-block;
+    float: left;
+    margin-top: 15px;
+}
+
+form::after{
+    display: block;
+    content: "";
+}
+
+button{
+    border-radius: 50em;
+    background: #85BAE5;
+    border: none;
+    color: #fff;
+    height: 54px;
+    padding: 0 50px;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    clear: both;
+    float: left;
+    margin-top: 25px;
+}
+
+button:focus{
+    outline: none;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.fileSelect{
+    background: #F7F7F7;
+    color: #B3B5B7;
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    float: left;
+}
+
+.filename{
+    float: left;
+    padding: 15px 25px;
+    color: #B3B5B7;
+    cursor: default;
+}
+
+#status, .data{
+    display: inline-block;
+    clear: both;
+    float: left;
+    margin-top: 25px;
+}
+
+.data{
+    display: none;
+}
+
+.data .types .csv, .data .types .table{
+    float: left;
+    cursor: pointer;
+    padding: 0 7px;
+    color: #B3B5B7;
+}
+
+.data .content{
+    display: none;
+    max-height: 500px;
+    max-width: 70%;
+    overflow: auto;
+    font-size: 16px;
+}
+
+.data .types .csv{
+    padding-left: 0;
+    border-right: 1px solid #e7e7e7;
+}
+
+.data .types{
+    margin-bottom: 7px 5px;
+    display: inline-block;
+}
+
+.active .content, .data .types .active{
+    color: #000;
+    display: inline-block;
+}
+
+td, th{
+    padding: 5px;
+    border: 1px solid #aaa;
+}
