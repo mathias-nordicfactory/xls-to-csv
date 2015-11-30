@@ -39,16 +39,15 @@ $(function(){
                 table += '<tr>';
                 for(i in arr){
                     if(arr[i].indexOf('<br/>') != -1) table += '</tr><tr>';
-                    if(arr[i].length != 0) table += '<td>'+arr[i].replace(/<br\/>/g, '')+'</td>';
+                    if(arr[i].length != 0) table += '<td>'+arr[i].replace(/<br\/>/g, '').replace(/"/g, '')+'</td>';
                 }
                 table += '</tr>';
-                console.log(arr, table)
                 $(".table .content").append("<br><table><tbody>"+table+"</tbody></table></div>");
                 console.log(response.data.replace(/<br\/>/g,''));
                 $('#status').hide();
                 $('.data').fadeIn();
                 var blob = new Blob([response.data.replace(/<br\/>/g,'')], {type: "text/csv"});
-                //saveAs(blob, response.name+".csv");
+                saveAs(blob, response.name+".csv");
             }
         });
         return false;
